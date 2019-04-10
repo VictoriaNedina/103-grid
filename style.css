@@ -1,27 +1,69 @@
 body{
     margin: 0;
     display:grid;
-    grid-template-areas: 'header header header header''nav nav nav nav''section section section aside''footer footer footer footer';
-    grid-template-rows: 20vh 5vh 50vh 25vh;
+    grid-template-areas: 'header header header header''nav nav nav aside' 'section section section aside''footer footer footer footer';
+    grid-template-rows: 20vh 5vh 80vh 25vh;
+    grid-template-columns: 24vw 24vw 24vw 24vw;
     grid-gap: 5px;
 }
 header{
     grid-area: header;
-    background-color: red;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+}
+header img{
+    height: 100%;
+    width:120px;
+    border: radius 100;
 }
 nav{
     grid-area: nav;
-    background-color: blue;
+    background-color: #f9acf2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    justify-content: space-around;
+    font-family: 'Roboto', sans-serif;
+}
+nav a:hover {
+    color: #f9acf2;
 }
 section{
     grid-area: section;
-    background-color: green;
+    background-color: white;
+    background-image: url('images/unicorn2.jpg');
+    background-size: cover;
 }
 aside{
     grid-area: aside;
-    background-color: yellow;
+    background-color: #f9acf2;
+    text-align: justify;
+    padding: 0px 10px;
+    font-family: 'Roboto', sans-serif;
+}
+aside h2 {
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 30px;
+    color: #ffffff;
 }
 footer{
     grid-area: footer;
-    background-color: magenta;
+    background-color:#f9acf2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer div{
+    display: flex;
+    justify-content: space-around;
+}
+footer div img{
+    width: 100%;
+    height: auto;
 }
